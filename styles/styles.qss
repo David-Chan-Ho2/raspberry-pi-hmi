@@ -1,0 +1,9 @@
+ButtonMotorPower {
+    background-color: lightgray;
+    font-weight: bold;
+    padding: 8px;
+    color: black;
+}
+
+ButtonMotorPower:checked {
+}
