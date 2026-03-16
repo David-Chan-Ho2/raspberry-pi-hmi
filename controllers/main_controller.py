@@ -23,7 +23,7 @@ class MainController(QObject):
 
     def update_ui(self):
         self.view.label_status.setText(f"Status: {self.view.status.value}")
-        self.view.measure_window.setVisible(self.view.status == StatusEnum.RUNNING)
+        self.view.setVisible(self.view.status == StatusEnum.RUNNING)
 
     def emergency_exit(self):
         os.system("sudo systemctl stop kiosk.service")
