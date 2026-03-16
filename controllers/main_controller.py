@@ -10,7 +10,7 @@ class MainController(QObject):
         super().__init__()
         self.view = view
         self.view.button_motor_power.toggled.connect(self.toggle_motor)
-        self.view.quit_shortcut = QShortcut(QKeySequence("Ctrl+Q"), self)
+        self.view.quit_shortcut = QShortcut(QKeySequence("Ctrl+Q"), self.view)
         self.view.quit_shortcut.activated.connect(self.emergency_exit)
 
     def toggle_motor(self, is_checked):
