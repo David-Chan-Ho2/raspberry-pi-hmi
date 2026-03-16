@@ -6,8 +6,8 @@ from ui.main_window import MainWindow
 
 app = QApplication(sys.argv)
 
-# with open("styles/styles.qss", "r") as f:
-#     app.setStyleSheet(f.read())
+with open("styles/styles.qss", "r") as f:
+    app.setStyleSheet(f.read())
 
 window = MainWindow()
 window.show()
