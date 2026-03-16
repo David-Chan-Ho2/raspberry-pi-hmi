@@ -2,8 +2,6 @@ import sys
 from PySide6.QtWidgets import QApplication
 
 from ui.main_window import MainWindow
-import os
-os.environ["QT_QPA_PLATFORM"] = "xcb"
 
 app = QApplication(sys.argv)
 

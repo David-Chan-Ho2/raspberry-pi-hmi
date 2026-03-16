@@ -3,6 +3,8 @@ from PySide6.QtWidgets import QWidget, QVBoxLayout, QLabel
 class MeasureWindow(QWidget):
     def __init__(self):
         super().__init__()
+        self.setMinimumSize(200, 100)
+        
         self.voltage = 0.0
         self.current = 0.0
         self.power = 0.0
@@ -19,6 +21,7 @@ class MeasureWindow(QWidget):
 
         self.setLayout(layout)
         self.refresh_labels() 
+        
 
     def refresh_labels(self):
         self.power = self.voltage * self.current
