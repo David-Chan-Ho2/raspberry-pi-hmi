@@ -1,11 +1,9 @@
 import sys
-import os
 
 from PySide6.QtWidgets import QApplication
 
 from ui.main_window import MainWindow
 
-os.environ["QT_QPA_PLATFORM"] = "xcb"
 app = QApplication(sys.argv)
 
 with open("styles/styles.qss", "r") as f:
