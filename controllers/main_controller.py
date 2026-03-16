@@ -18,7 +18,6 @@ class MainController(QObject):
 
     def update_ui(self):
         self.view.label_status.setText(f"Status: {self.view.status.value}")
-        self.view.setVisible(self.view.status == StatusEnum.RUNNING)
 
     def refresh_labels(self):
         self.view.power = self.view.voltage * self.view.current
