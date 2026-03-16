@@ -4,6 +4,3 @@ ButtonMotorPower {
     padding: 8px;
     color: black;
 }
-
-ButtonMotorPower:checked {
-}
