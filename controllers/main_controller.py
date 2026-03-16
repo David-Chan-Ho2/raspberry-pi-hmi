@@ -28,3 +28,14 @@ class MainController(QObject):
     def emergency_exit(self):
         os.system("sudo systemctl stop kiosk.service")
         sys.exit()
+    
+    def refresh_labels(self):
+        self.view.power = self.view.voltage * self.view.current
+        self.view.label_voltage.setText(f"Voltage: {self.view.voltage:.2f} V")
+        self.view.label_current.setText(f"Current: {self.view.current:.3f} A")
+        self.view.label_power.setText(f"Power: {self.view.power:.4f} W")
+
+    def set_measurements(self, voltage, current):
+        self.view.voltage = voltage
+        self.view.current = current
+        self.view.refresh_labels()
