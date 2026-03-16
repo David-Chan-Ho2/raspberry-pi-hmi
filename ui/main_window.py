@@ -9,6 +9,7 @@ class MainWindow(QWidget):
     
     def __init__(self):
         super().__init__()
+        self.setMinimumSize(200, 100)
         self.status = StatusEnum.STOPPED
         self.motor_speed = 100
 
@@ -27,7 +28,6 @@ class MainWindow(QWidget):
         layout.addWidget(self.label_status, 0, 0)
         layout.addWidget(self.label_motor_speed, 0, 1)
         layout.addWidget(self.button_motor_power, 0, 2)
-        layout.addWidget(self.measure_window, 1, 0, 1, 3)
 
         self.setLayout(layout)
         
