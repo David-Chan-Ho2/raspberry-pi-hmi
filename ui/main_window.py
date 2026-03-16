@@ -1,8 +1,8 @@
 from PySide6.QtWidgets import QWidget, QLabel, QGridLayout
 
-from constants.enums import StatusEnum
 from widgets.button_motor_power import ButtonMotorPower
 from controllers.main_controller import MainController
+from constants.enums import StatusEnum
 from ui.measure_window import MeasureWindow
 
 class MainWindow(QWidget):
@@ -33,4 +33,3 @@ class MainWindow(QWidget):
         self.measure_window.setVisible(False)
 
         self.setLayout(layout)
-
